@@ -1,0 +1,23 @@
+<project name="java_project" basedir="." default="test">
+	<property name="main-java-dir" value="${basedir}src/main/java" />
+	<property name="test-java-dir" value="${basedir}src/test/java" />
+	<property name="build-dir" value="${basedir}bin" />
+	<target name="clean">
+		<delete dir="${build-dir}" />
+	</target>
+	<target name="init">
+		<delete dir="${build-dir}" />
+	</target>
+	<target name="compile" depends="init">
+		<java srcdir="${main-java-dir}" destdir="${build-dir}" />
+	</target>
+	<target name="test-compile">
+		<java srcdir="${test-java-dir}" destdir="${build-dir}" />
+	</target>
+	<target name="test" depends="test-compile">
+		<junit>
+			<test name="ua.nure.Vyrvykhvost.UserTest">
+			</test>
+		</junit>
+	</target>
+</project>
