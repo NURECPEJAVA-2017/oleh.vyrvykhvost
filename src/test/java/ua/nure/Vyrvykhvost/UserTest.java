@@ -11,6 +11,10 @@ public class UserTest extends TestCase {
 		user.setFirstName("Oleg");
 		user.setLastName("Vyrvyj");
 		String fullName = user.getFullName();
-	assertEquals("Oleg Vyrvyj", fullName);	
+	assertEquals("Oleg Vyrvyj", fullName);
+	User age = new User();
+	age.setDateOfBirth("17");
+	String age = 
+	
 	}
 }
