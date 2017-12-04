@@ -1,12 +1,17 @@
 package ua.nure.Vyrvykhvost;
 
 import java.util.Date;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 public class User {
  private Long id;
  private String firstName;
  private String lastName;
  private Date dateOfBirth;
+
+	
+
 public Long getId() {
 	return id;
 }
@@ -80,6 +85,18 @@ public boolean equals(Object obj) {
 public String getFullName() {
 	
 	return new StringBuilder().append(firstName).append(" ").append(lastName).toString();
+}
+public Object getAge() {
+	Calendar calendar=Calendar.getInstance();
+	
+	calendar.setTime(new Data());
+	int currentYear=calendar.setTime(1984,Calendar.MAY,26);
+	calendar.setTime(getDateOfBirth());
+	int aa=calendar.setTime(Calendar.DAY_OF_MONTH);
+	int age=currentYear.get(Calendar.YEAR)
+	
+	
+	return null;
 }
  
 }
