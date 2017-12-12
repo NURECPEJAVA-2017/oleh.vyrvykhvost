@@ -42,7 +42,7 @@ public class UserTest extends TestCase {
 		Calendar calendar=Calendar.getInstance();
 		calendar.set(YEAR_OF_BIRTH,MONTH_OF_BIRTH,DAY_OF_BIRTH);
 		dateOfBirth=calendar.getTime();
-		user.setBirthday(dateOfBirth);
+		user.setDateOfBirth(dateOfBirth);
 		aseertEquals(ETALONE_AGE, user.getAge());
 	}
 	//Тест(2) день рождение уже прошёл в этом году
@@ -50,7 +50,7 @@ public class UserTest extends TestCase {
 		Calendar calendar=Calendar.getInstance();
 		calendar.set(YEAR_OF_BIRTH, MONTH_OF_BIRTH2, DAY_OF_BIRTH);
 		dateOfBirth=calendar.getTime();
-		user.setBirthday(dateOfBirth);
+		user.setDateOfBirth(dateOfBirth);
 		aseertEquals(ETALONE_AGE, user.getAge());
 	
 	}
@@ -67,7 +67,7 @@ public class UserTest extends TestCase {
 	Calendar calendar=Calendar.getInstance();
 	calendar.set(YEAR_OF_BIRTH, MONTH_OF_BIRTH, DAY_OF_BIRTH3);
 	dateOfBirth=calendar.getTime();
-	user.setBirthday(dateOfBirth);
+	user.setDateOfBirth(dateOfBirth);
 	aseertEquals(ETALONE_AGE2,user.getAge());
 		}
 	//Тест(5) месяц рождения ещё не начался
@@ -75,7 +75,7 @@ public class UserTest extends TestCase {
 		Calendar calendar=Calendar.getInstance();
 		calendar.set(YEAR_OF_BIRTH+1, MONTH_OF_BIRTH3, DAY_OF_BIRTH);
 		dateOfBirth=calendar.getTime();
-		user.setBirthday(dateOfBirth);
+		user.setDateOfBirth(dateOfBirth);
 		aseertEquals(ETALONE_AGE2, user.getAge());
 	}
 	//Тест(6)год рожждения ещё не начался
@@ -91,7 +91,7 @@ public class UserTest extends TestCase {
 		Calendar calendar=Calendar.getInstance();
 		calendar.set(YEAR_OF_BIRTH, MONTH_OF_BIRTH3, DAY_OF_BIRTH3);
 		dateOfBirth=calendar.getTime();
-		user.setBirthday(dateOfBirth);
+		user.setDateOfBirth(dateOfBirth);
 		aseertEquals(ETALONE_AGE2,user.getAge());
 	}
 
